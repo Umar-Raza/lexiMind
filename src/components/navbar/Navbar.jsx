@@ -1,25 +1,25 @@
-import React from 'react'
-
+import React from "react";
+import { Brain, History, Bookmark, Moon } from "lucide-react";
 export const Navbar = () => {
-    return (
-        <div className="navbar shadow-sm shadow-primary">
-            <div className="flex-1 ">
-                <a className="btn btn-ghost text-xl "><span className='text-primary ft italic'>LexiMind</span></a>
-            </div>
-            <div className="flex-none">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Link</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="bg-base-100 rounded-t-none p-2">
-                                <li><a>Link 1</a></li>
-                                <li><a>Link 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="navbar shadow-sm text-primary shadow-primary px-[200px] flex items-center justify-between">
+      <div className="flex-1 ">
+        <a className="btn btn-ghost text-xl text-primary">
+          <Brain />
+          <h3>LexiMind</h3>
+        </a>
+      </div>
+      <div className="flex p-2 ">
+        <a className="btn btn-ghost hover:text-background">
+          <History />
+        </a>
+        <a className="btn btn-ghost hover:text-background">
+          <Bookmark />
+        </a>
+        <a className="btn btn-ghost hover:text-background">
+          <Moon />
+        </a>
+      </div>
+    </div>
+  );
+};
