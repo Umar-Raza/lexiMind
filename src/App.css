@@ -6,7 +6,7 @@
 body {
   background-color: var(--backgroun);
   color: var(--foreground);
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .inputBox {

@@ -3,11 +3,14 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Search } from "lucide-react";
 import { GoogleGenAI } from "@google/genai";
 import { useState } from "react";
+import { PropagateLoader } from "react-spinners";
+import ReactMarkdown from "https://esm.sh/react-markdown@7";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   const [word, setWord] = useState("");
   const [result, setResult] = useState("");
-
+  const [loading, setLoading] = useState(false);
   const changeBorderColor = () => {
     let inputBox = document.querySelector(".inputBox");
     inputBox.style.borderColor = "#20acdf";
@@ -23,14 +26,17 @@ function App() {
   });
 
   async function getResult() {
+    setLoading(true);
     const response = await ai.models.generateContent({
       model: "gemini-2.0-flash",
-      contents: `Explain how AI works in a few words ${word}`
+      // contents: `Explain how AI works in a few words ${word}`
+      contents: `Considered you are a dictionary AI. we will give to a word and you need to Give all the dictionary details in good form 
+      including examples also, Meanings, Definitions, Synonyms , Phonetics etc The Word is ${word}`,
     });
     setResult(response.text);
     console.log(response.text);
+    setLoading(false);
   }
-
 
   return (
     <span>
@@ -62,8 +68,10 @@ function App() {
           borderBottom: "1px solid #1d5063",
         }}
       >
-        {result}
+        <ReactMarkdown>{result}</ReactMarkdown>
+        {loading && <PropagateLoader color="#20acdf" className="mt-5 text-center"  />}
       </div>
+      <Footer/>
     </span>
   );
 }
