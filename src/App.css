@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--backgroun);
+  background-color: var(--background);
   color: var(--foreground);
   /* height: 100vh; */
 }
@@ -15,7 +15,7 @@ body {
   border: 0.5px solid var(--accent);
   border-radius: 10px;
   margin: 10px;
-  background-color:#223941;
+  background-color: #223941;
   transition: 0.3s ease;
   padding: 15px;
 }
@@ -33,13 +33,28 @@ body {
   font-size: 1.2rem;
 }
 
+h2 {
+  font-size: 25px !important;
+  font-weight: bold !important;
+  font-style: italic;
+  color: var(--primary);
+  margin-left: 10px !important;
+}
+p strong {
+  /* font-size: 15px !important; */
+  /* color: var(--primary); */
+}
+
+p {
+  margin: 10px 0 5px 0 !important;
+}
 /* .resultContainer {
   border-top: red;
   border-bottom: var(--accent);
 } */
 
 :root {
-  --backgroun: #1d2b30;
+  --background: #1d2b30;
   --foreground: #f1f3f4;
   --primary: #20acdf;
   --secondry: #a1b6bd;
@@ -50,7 +65,7 @@ h2,
 h3,
 h4,
 h5,
-.ft {
+.ft .footer {
   font-family: "Roboto";
 }
 
@@ -60,4 +75,12 @@ h5,
 
 @plugins 'daisyui' {
   themes: false;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1 0 auto;
 }
