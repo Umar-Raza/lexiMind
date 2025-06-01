@@ -6,9 +6,10 @@ export const Footer = () => {
       <aside>
         <p>
           Copyright © {new Date().getFullYear()} - Devlop & Design by{" "}
-          <span className="text-primary cursor-pointer hover:underline ml-1 mr-1">
+          <a className="text-primary cursor-pointer hover:underline ml-1 mr-1 font-semibold  italic" href="https://mu-portfolio.web.app/" target="_blank">
+            
             Muhammad Umar
-          </span>{" "}
+          </a>{" "}
           All Right Reserved.
         </p>
       </aside>
