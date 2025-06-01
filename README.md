@@ -1,4 +1,4 @@
-# Leximind (Umar Raza's Project)
+# Leximind (Vocabulary Explorer)
 * This is a deployment of the Leximind web application, hosted on Vercel by Umar Raza. Leximind aims to be a valuable tool for enhancing vocabulary and exploring linguistic concepts in an interactive manner. It's designed to make learning about words and their applications more accessible and engaging.
 
 ## 🚀 Live Application
@@ -34,7 +34,7 @@ Based on the name "Leximind" and the typical functionality of such applications,
 * **Daisy UI:** A component library for Tailwind CSS, providing pre-built UI elements.
 * **Vercel:** A platform for deploying and hosting web applications.
 * **Google Gemini API:** The powerful AI model driving the conversational capabilities.
-* **This particular URL**, leximind-umar-razas-projects-7813ad33.vercel.app/, indicates it is a personal project or a specific version deployed by Umar Raza.
+* **This particular URL**, https://leximind.vercel.app/ , indicates it is a personal project or a specific version deployed by Umar Raza.
 
 ## Author
 
