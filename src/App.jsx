@@ -7,8 +7,6 @@ import { PropagateLoader } from "react-spinners";
 import ReactMarkdown from "https://esm.sh/react-markdown@7";
 import { Footer } from "./components/footer/Footer";
 import remarkGfm from "remark-gfm";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 
 function App() {
   const [word, setWord] = useState("");
