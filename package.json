@@ -14,7 +14,7 @@
     "lucide-react": "^0.509.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-markdown": "^8.0.6",
+    "react-markdown": "^8.0.7",
     "react-spinners": "^0.17.0",
     "remark-gfm": "^4.0.1"
   },

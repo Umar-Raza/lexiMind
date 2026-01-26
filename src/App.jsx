@@ -1,11 +1,11 @@
 import "./App.css";
-import { Navbar } from "./components/navbar/Navbar";
 import { Search } from "lucide-react";
 import { GoogleGenAI } from "@google/genai";
+// import { GoogleGenAI } from "@google/genai";
 import { useState } from "react";
 import { PropagateLoader } from "react-spinners";
-import ReactMarkdown from "https://esm.sh/react-markdown@7";
-import { Footer } from "./components/footer/Footer";
+import Markdown from 'react-markdown'
+
 import remarkGfm from "remark-gfm";
 
 function App() {
@@ -27,10 +27,9 @@ function App() {
   async function getResult() {
     setIsLoading(true);
     const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       // contents: `Explain how AI works in a few words ${word}`
-      contents: `Considered you are a dictionary AI. we will give to a word and you need to Give all the dictionary details in good form 
-      including examples also, Meanings, Definitions, Synonyms , Phonetics etc The Word is ${word}`,
+      contents: `and professional dictionary details for the given word. Strictly avoid using any emojis. Format the output using clear headings and Markdown for a sophisticated look. For every word, include:Phonetics: (e.g., IPA notation and pronunciation guide) Part of Speech: (e.g., Noun, Verb, Adjective) Definition: A precise and formal explanation. Meanings: Multiple layers of meaning if applicable. Synonyms & Antonyms: Organized in a clear list. Usage Examples: 2-3 high-quality, professional sentences. Etymology: (Optional) A brief origin of the word. Ensure the tone is academic, helpful, and grounded. The Word is ${word}`,
     });
     setResult(response.text);
     // console.log(response.text);
@@ -70,7 +69,7 @@ function App() {
         {isLoading ? (
           <PropagateLoader color="#20acdf" className="mt-11 text-center" />
         ) : (
-          <ReactMarkdown children={result} remarkPlugins={[remarkGfm]} />
+          <Markdown children={result} remarkPlugins={[remarkGfm]} />
         )}
       </div>
     </main>
